@@ -4,12 +4,6 @@ function cleanup(alphabet, letter, bestSeed) {
       continue
     }
 
-    // remove surplus seeds
-    // console.log(`Cleaning up ${seed.name}.`)
-    // for (var seedLetter of seed.letterSet) {
-    //   console.log(seedLetter, alphabet.getSeeds(seedLetter))
-    // }
-
     var allLettersCoveredTwice = seed.everyLetters(seedLetter => alphabet.getSeeds(seedLetter).size > 1)
 
     if (allLettersCoveredTwice) {
